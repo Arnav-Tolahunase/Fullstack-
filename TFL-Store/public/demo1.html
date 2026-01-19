@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Page</title>
+        <script src="scripts/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>This is a demo page.</h1>
+        <button id="hideBtn">Hide me</button>
+        <button id="showBtn">Show me</button>
+        <p id="para">Arnav Tolahunase</p>
+
+        
+
+        <script>
+            $(document).ready(function(){
+                console.log("Document is ready");
+                $("#hideBtn").click(function(){
+                    $("#para").hide();
+                });
+                $("#showBtn").click(function(){
+                    $("#para").show();
+                });
+            });
+        </script>
+
+    </body>
+</html>

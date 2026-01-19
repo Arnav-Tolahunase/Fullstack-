@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Catalog</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <body>
+        <h1>Todays Fresh Flowers available for sale...</h1>
+        <hr/>
+
+        <button>GetFlowers</button>
+
+        <ol id="Flowers List">
+        </ol>
+        <p id="para"></p>
+
+        <script>
+
+        /*Classical Ajax Technique
+              make a query for RESR API - once the data is available sucessfully
+              it will be able to print error on console of browser if data does 
+              not arrive and fail it will bw able to print error on console of 
+              browser.
+
+              Ajax uses JQuey Library
+              Ajax function is part of JQuery library
+              In Ajax '$' is a pointer which points to a specific document or a button etc..
+              $ in JQuey is defined as selector 
+
+              JQuery is used to provide - event handling , DOM manupilation  , Ajax
+        */
+
+        // 
+
+            $(document).ready(function(){
+                console.log("Document is ready");
+                $("button").click(function(){
+                    console.log("button is clicked");
+                    var p = document.getElementById("para")
+
+                    // make asynchronous JavaScript call using $.get
+                    //  1st parameter is always relative url of your web api (REST API)
+                    //  2nd parameter is always callback function which will be invoked on recived response from server REST API
+                    // $ is to get and get is ajax function
+
+                    $.get("/api/flowers", function(data, status){
+                    //alert("Data : " + JSON.stringify(data) + "\nStatus : " + status);
+                    for(var i=0; i<data.length ; i++){
+                        console.log(data[i].name);
+
+                        var ol = document.getElementById("Flowers List");
+                        ol.appendChild(data[i]);
+                        //p.innerHTML = p.innerHTML + " " + data[i].name;
+                    }
+                    });
+                });
+            });
+        
+            /*
+            // fetch teh data from the server
+            async function getFlowersFromTFLStore(){
+                var flowersUrl = "/api/flowers";
+                // any function you invoke outside is going to be asynchronous by nature.
+                try{
+                    let response = await fetch(flowerUrl);
+                    console.log(response.body)
+                }
+                catch(err){
+                    console.log(err);
+                }
+            // exception handaling
+            }
+            getFlowersFromTFLStore();*/
+        </script>
+
+    </body>
+</html>

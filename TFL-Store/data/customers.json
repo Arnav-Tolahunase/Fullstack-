@@ -1,0 +1,8 @@
+[
+    {"id":"1", "firstname":"Arnav", "lastname":"Tolahunase", "email":"arnav.tolahunase@gmail.com", "contact":"9545611780"},
+    {"id":"2", "firstname":"Chaitrali", "lastname":"Patil", "email":"chaitrali.patil@gmail.com", "contact":"7030799646"},
+    {"id":"3", "firstname":"Rahul", "lastname":"Sharma", "email":"rahul.sharma@gmail.com", "contact":"9876543210"},
+    {"id":"4", "firstname":"Priya", "lastname":"Patel", "email":"priya.patel@gmail.com", "contact":"9123456789"},
+    {"id":"5", "firstname":"Amit", "lastname":"Kumar", "email":"amit.kumar@gmail.com", "contact":"9876543210"},
+    {"id":"6", "firstname":"Sneha", "lastname":"Singh", "email":"sneha.singh@gmail.com", "contact":"9123456789"}
+    ]
