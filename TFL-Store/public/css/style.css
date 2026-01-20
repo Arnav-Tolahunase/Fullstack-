@@ -1,5 +1,5 @@
 .card-img-top {
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     ;    
 }
@@ -10,13 +10,14 @@
     width: 100%;
 }
 
-.html {
+html {
   scroll-behavior: smooth;
 }
 
 /* ===== Transflower Theme ===== */
 body {
   font-family: "Poppins", sans-serif;
+ 
 }
 
 /* Override Bootstrap colors */
@@ -74,4 +75,15 @@ footer {
   background-color: var(--bs-primary)!important;
   color: #fff;
   border-color: var(--bs-primary)!important;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.modal-content {
+  border-radius: 12px;
 }
