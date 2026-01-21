@@ -4,58 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transflower - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- navbar-expand-lg: Expands on large screens ; navbar-dark: font for dark navbar; bg-dark: dark bg -->
-    <div class="container">
-    <a class="navbar-brand fw-bold" href="#">🌼 Transflower Store</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><!--navbar-toggler: Collapsible on small screens -->
-        <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-flower1 me-2"></i>Transflower
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html"><i class="bi bi-basket"></i> Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      </ul>
     </div>
-    </div>
-    </nav>
+  </div>
+</nav>
 
   <!-- Include Navbar -->
   <!-- Copy from index.html -->
 
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Our Products</h2>
-      <div class="row g-4">
+  <section class="container my-5">
+  <h2 class="text-center mb-4">Explore Our Collections</h2>
+
+  <!-- Tab Navigation -->
+  <ul class="nav nav-tabs justify-content-center" id="productTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="roses-tab" data-bs-toggle="tab" data-bs-target="#roses" type="button" role="tab">Roses</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tulips-tab" data-bs-toggle="tab" data-bs-target="#tulips" type="button" role="tab">Tulips</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="sunflowers-tab" data-bs-toggle="tab" data-bs-target="#sunflowers" type="button" role="tab">Sunflowers</button>
+    </li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content mt-4" id="productTabContent">
+    <div class="tab-pane fade show active" id="roses" role="tabpanel">
+      <div class="row">
+
         <div class="col-md-4">
-          <div class="card h-100">
-            <img src="images/red-rose.jpg" class="card-img-top" alt="Red Roses">
+          <div class="card">
+            <img src="images/red-rose.jpg" class="card-img-top">
             <div class="card-body text-center">
-              <h5 class="card-title">Red Roses</h5>
-              <p>₹499 | Elegant bouquet for special moments</p>
+              <h5>Red Roses</h5>
+              <p>Rs. 599</p>
               <a href="#" class="btn btn-outline-primary">Buy Now</a>
+              <a href="#" class="btn btn-primary">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/pink-rose.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Pink Roses</h5>
+              <p>Rs. 699</p>
+              <a href="#" class="btn btn-outline-primary">Buy Now</a>
+              <a href="#" class="btn btn-primary">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </a>
             </div>
           </div>
         </div>
 
+        
         <div class="col-md-4">
-          <div class="card h-100">
+          <div class="card">
+            <img src="images/white-rose.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>White Roses</h5>
+              <p>Rs. 799</p>
+              <a href="#" class="btn btn-outline-primary">Buy Now</a>
+              <a href="#" class="btn btn-primary">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        
+
+
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tulips" role="tabpanel">
+      <div class="row">
+        <div class="col-md-4">
+        <div class="card h-100">
             <img src="images/tulip.jpg" class="card-img-top" alt="Tulip Delight">
             <div class="card-body text-center">
               <h5 class="card-title">Tulip Delight</h5>
               <p>₹399 | Fresh tulips to brighten your day</p>
               <a href="#" class="btn btn-outline-primary">Buy Now</a>
+              <a href="#" class="btn btn-primary">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </a>
             </div>
           </div>
-        </div>
+          </div>
+      </div>
+    </div>
 
+    <div class="tab-pane fade" id="sunflowers" role="tabpanel">
+      <div class="row">
         <div class="col-md-4">
           <div class="card h-100">
             <img src="images/sunflower.jpg" class="card-img-top" alt="Sunflower Joy">
@@ -63,12 +135,18 @@
               <h5 class="card-title">Sunflower Joy</h5>
               <p>₹299 | Bring sunshine into your home</p>
               <a href="#" class="btn btn-outline-primary">Buy Now</a>
+              <a href="#" class="btn btn-primary">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+  
 
   <!-- Footer -->
   <!-- Copy from index.html -->
@@ -76,7 +154,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-4">
+    <footer class="fixed-bottom bg-dark text-white text-center py-3 mt-4">
       <!-- <button
         class="btn btn-outline-light ms-3"
         data-bs-toggle="modal"
