@@ -65,12 +65,17 @@ body {
 .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+<<<<<<< HEAD
   border-radius: 15px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card-header h4 {
   letter-spacing: 1px;
+=======
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+>>>>>>> 77d4d3e0952df44dd11af24cd668eee44c2c8b63
 }
 
 /* Footer */
@@ -138,7 +143,10 @@ h1 {
   height: 400px;
 }
 
+<<<<<<< HEAD
 .btn-danger {
   border-radius: 25px;
 }
 
+=======
+>>>>>>> 77d4d3e0952df44dd11af24cd668eee44c2c8b63
