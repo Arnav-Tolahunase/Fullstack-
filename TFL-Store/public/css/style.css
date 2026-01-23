@@ -1,7 +1,8 @@
 .card-img-top {
     height: 400px;
     object-fit: cover;
-    ;    
+    border-radius: 10px;
+    
 }
 
 .carouselImage{
@@ -39,21 +40,37 @@ body {
   color: var(--bs-warning) !important;
 }
 
+.navbar-brand i {
+  animation: bloom 2s ease-in-out infinite alternate;
+}
+
+@keyframes bloom {
+  0% { transform: scale(1); color: #fff; }
+  100% { transform: scale(1.2); color: #FFC0CB; }
+}
+
 /* Buttons */
 .btn-primary {
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
+  transition: all 0.3s ease;
 }
 .btn-primary:hover {
   background-color: #c2185b;
   border-color: #c2185b;
+  transform: scale(1.05);
 }
 
 /* Cards */
 .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-header h4 {
+  letter-spacing: 1px;
 }
 
 /* Footer */
@@ -70,6 +87,8 @@ footer {
 .card:hover {
   transform: scale(1.03);
   transition: 0.3s ease-in-out;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 .btn-outline-primary:hover {
   background-color: var(--bs-primary)!important;
@@ -87,3 +106,39 @@ form {
 .modal-content {
   border-radius: 12px;
 }
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.tab-content {
+  animation: fadeIn 0.7s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.lead {
+  color: #555;
+}
+
+.hero-image {
+  height: 400px;
+}
+
+.btn-danger {
+  border-radius: 25px;
+}
+
