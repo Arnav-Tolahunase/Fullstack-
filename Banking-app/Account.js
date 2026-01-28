@@ -11,6 +11,7 @@ var emmiter=new events.EventEmitter();
 
 var Account=function(amount){
     var balance=amount;
+
     var monitor=function(){
         if(balance<5000){
             console.log("Balance is below minimum threshold");
@@ -23,10 +24,12 @@ var Account=function(amount){
             //handler.payIncomeTax();
         }
     }
+
     var deposit=function(amount){
         balance+=amount;
         monitor();
     }
+    
     var withdraw=function(amount){
         if(amount<=balance){
             balance-=amount;
