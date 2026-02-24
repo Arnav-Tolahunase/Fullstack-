@@ -1,0 +1,6 @@
+ [{"id": 1, "name": "Rose", "color": "Red" ,"description": "A red rose symbolizes love and passion."},
+     {"id": 2, "name": "Tulip", "color": "Yellow" ,"description": "A yellow tulip represents cheerful thoughts."     },
+    {"id": 3, "name": "Daisy", "color": "White" ,"description": "A white daisy signifies purity and innocence."   },
+    {"id": 4, "name": "Sunflower", "color": "Yellow" ,"description": "A sunflower stands for adoration and loyalty." },
+    {"id": 5, "name": "Lily", "color": "White" ,"description": "A white lily is a symbol of purity and refined beauty."}
+]

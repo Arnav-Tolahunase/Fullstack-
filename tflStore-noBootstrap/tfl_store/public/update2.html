@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <h1>Update Existing Users</h1>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <hr/>
+                <button id="btnRead">Read</button><br/>
+                <button id="btnUpdate">Update</button><br/>
+                <button id="btnCreate">Create</button><br/>
+                <button id="btnDelete">Delete</button><br/>
+                <!---Reading data from the connected Database--->
+                <button id="btnReadUsers">Read Users</button><br/>
+    <script>
+        
+        //Ajax Function for only Read from Customers in the client side
+        $(document).ready(function(){
+            $('#btnRead').click(function(){
+                let url="/api/customers";
+                $.ajax({
+                url: url, // url of rest api
+                type:'GET', //request type of rest api
+                success: function (result) {
+                    // do something with result
+                    console.log("All Users");
+                    console.log(result);
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            });
+            });
+        });
+
+        //Ajax Function for Updating new Customer in the client side
+        $(document).ready(function(){
+            $("#btnUpdate").click(function(){
+                //alert("button clicked.....")
+                //send data to rest api for put request handler
+                //http:localhost:9000/api/register
+                var theCustomer={
+                    "id":7,
+                    "firstname": "Sam",
+                    "lastname" : "Rasal",
+                    "email" : "samruddhi@gmail.com",
+                    "contact number" : 9665992262
+                };
+            let url="/api/customers/:id" + theCustomer.id;
+            //invoking put rest api at server side 
+            //$.put(url,theCustomer,function(){
+              //  console.log("data is updated to server.")
+            //}); 
+            
+            // in jquery there are no $.put and $.delete functon available
+            //we should use $.ajax function
+            //to call any type od HTTP Request handler
+            //available at server side 
+            // $.ajax is a generic function used for att GET POST PUT DELETEd
+
+            $.ajax({
+                url: url, // url of rest api
+                type:'PUT', //request type of rest api
+                data: theCustomer, // data to be sent through request body
+                success: function (result) {
+                    // do something with result
+                    console.log("customer is updated to server");
+                }
+            });
+
+            });
+        }); 
+
+        //Ajax Function for update from Customers in the client side
+        $(document).ready(function(){
+            $('#btnUpdate').click(function(){
+                var newCustomer={
+                        "id":12,
+                        "firstname":"Jui",
+                        "lastname":"Jagdale",
+                        "email":"juijagdale@gmail.com",
+                        "contact number":9876543291
+                    };
+                let url="/api/customers";
+                $.ajax({
+                url: url, // url of rest api
+                type:'GET', //request type of rest api
+                success: function (result) {
+                    // do something with result
+                    console.log("All Users");
+                    console.log(result);
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            });
+            });
+        });
+
+        //Ajax Function for Create new from in the client side
+        $(document).ready(function(){
+            $('#btnCreate').click(function(){
+                let url="/api/register";
+                $.ajax({
+                url: url, // url of rest api
+                type:'POST', //request type of rest api
+                success: function (result) {
+                    // do something with result
+                    console.log("Created New CUstomer");
+                    console.log(result);
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            });
+            });
+        });
+
+        //Ajax function to see users from database connected
+        $(document).ready(function(){
+            $('#btnReadUsers').click(function(){
+                let url="/api/users";
+                $.ajax({
+                url: url, // url of rest api
+                type:'GET', //request type of rest api
+                success: function (result) {
+                    // do something with result
+                    console.log("All Users");
+                    console.log(result)
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            });
+            });
+        });
+        
+        
+
+
+    </script>
+
+
+        </body>
+    </head>
+</html>

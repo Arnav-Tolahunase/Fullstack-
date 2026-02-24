@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <h1>Update Existing Flower</h1>
+            <script>src="/scripts/jquery.min.js"</script>
+            <hr/>
+            <table>
+                <tr>
+                <td><lable>ID</lable></td>
+                <td><input type="text" id="id" name="id" required /></td>
+            </tr>
+            <tr>
+                <td><lable>First Name</lable></td>
+                <td><input type="text" id="firstname" name="firstname" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Last Name</lable></td>
+                <td><input type="text" id="lastname" name="lastname" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Email ID</lable></td>
+                <td><input type="email" id="email" name="email" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Contact Number</lable></td>
+                <td><input type="text" id="contact" name="contact" required /></td>
+            </tr>
+            <tr>
+    <tr>
+        <td></td>
+        <td><button>Update</button></td>
+    </tr>
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                //alert("button clicked.....")
+                //send data to rest api for put request handler
+                //http:localhost:9000/api/register
+                var theCustomer={
+                    "id":7,
+                    "firstname": "Sam",
+                    "lastname" : "Rasal",
+                    "email" : "samruddhi@gmail.com",
+                    "contact number" : 9665992262
+                };
+            let url="/api/customers/:id" + theCustomer.id;
+            //invoking put rest api at server side 
+            /*$.put(url,theCustomer,function(){
+                console.log("data is updated to server.")
+            }); */
+            
+            // in jquery there are no $.put and $.delete functon available
+            //we should use $.ajax function
+            //to call any type od HTTP Request handler
+            //available at server side 
+            // $.ajax is a generic function used for att GET POST PUT DELETEd
+
+            $.ajax({
+                url: url, // url of rest api
+                type:'PUT', //request type of rest api
+                data: theCustomer, // data to be sent through request body
+                success: function (result) {
+                    // do something with result
+                    console.log("customer is updated to server");
+                }
+            })
+
+            })
+        })
+
+    </script>
+
+
+        </body>
+    </head>
+</html>

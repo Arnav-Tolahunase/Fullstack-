@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Cat</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <script src="script/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <button>Send Data</button>
+
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    //alert("button clicked..")
+
+                    var newCustomer={
+                        "id":"76",
+                        "firstname":"Arnav",
+                        "lastname":"Tolahunase",
+                        "email":"arnav@gmail.com",
+                        "contactnumber":"9545611780"
+                    };
+                    let url="/api/register";
+                    $.post(url,newCustomer,function(){
+                        console.log("data is posted to server")
+                    })
+                })
+            })
+        </script>
+    </body>
+</html> 

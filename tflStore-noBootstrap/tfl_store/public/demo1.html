@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <title>Product Catalog</title>
+        <script src="script/jquery.min.js"></script>
+    </head>
+    <body>
+        <button id =btn1>Hide</button>
+        <button id =btn2>Show</button>
+    </body>
+    <p id="para1">This is Demo for Show and Hide using JQuey</p>
+    <p id="para2">This is Demo for Show and Hide using JQuey</p>
+    <p id="para3">This is Demo for Show and Hide using JQuey</p>
+
+    <script>
+
+        // var btn1=document.getElementById("btn1");
+        // btn1.addEventListener("click",function(){
+        //     var para1=document.getElementById("para1");
+        //     para1.hide();
+        // });
+
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#para1").hide();
+
+            });
+            $("#btn2").click(function(){
+                $("#para1").show();
+
+            });
+        });
+    </script>
+</html>
